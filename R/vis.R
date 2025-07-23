@@ -1437,7 +1437,7 @@ vis_box <- function(.data, .by = NA, .meta = NA, .melt = TRUE,
           }
         }
 
-        p_df <- compare_means(Value ~ Group, .data, comparisons = comparisons, p.adjust.method = "holm")
+        p_df <- compare_means(Value ~ Group, .data, comparisons = comparisons)
 
         y_max <- max(.data$Value)
         p.value.y.coord <- rep(y_max, nrow(p_df))
@@ -2156,7 +2156,7 @@ vis_bar <- function(.data, .by = NA, .meta = NA, .errorbars = c(0.025, 0.975), .
           }
         }
 
-        p_df <- compare_means(Value ~ Group, .data, comparisons = comparisons, p.adjust.method = "holm")
+        p_df <- compare_means(Value ~ Group, .data, comparisons = comparisons)
 
         y_max <- max(.data$Value)
         p.value.y.coord <- rep(y_max, nrow(p_df))
